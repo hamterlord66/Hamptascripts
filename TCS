@@ -21,7 +21,7 @@ local Window = Rayfield:CreateWindow({
 
    Discord = {
       Enabled = true,
-      Invite = "noinvitelink",
+      Invite = "YYzUDSywJP",
       RememberJoins = true
    },
 
@@ -29,7 +29,7 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "Script | Key system",
       Subtitle = "Key System",
-      Note = "Join discord",
+      Note = "Join discord | .gg/YYzUDSywJP",
       FileName = "Key",
       SaveKey = false,
       GrabKeyFromSite = false,
