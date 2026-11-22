@@ -1,11 +1,12 @@
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Ultimate Game Script",
+   Name = "CDS Script",
    Icon = 0,
    LoadingTitle = "Loading...",
    LoadingSubtitle = "by Hampta Scripts",
-   ShowText = "US",
+   ShowText = "CDS",
    Theme = "Dark Blue",
 
    ToggleUIKeybind = "K",
@@ -321,12 +322,62 @@ game:GetService("ReplicatedStorage"):WaitForChild("LocalReplicated"):WaitForChil
    end,
 })
 
-local TpTab = Window:CreateTab("Teleport", nil)
-local TpSection = TpTab:CreateSection("Places")
+local StatsTab = Window:CreateTab("Stats", nil)
+local StatsSection = StatsTab:CreateSection("All Stats")
 
-local Button = TpTab:CreateButton({
-   Name = "Coming Soon!",
+local Button = StatsTab:CreateButton({
+   Name = "Max Fighting stats (It'll take abit)",
    Callback = function()
-       
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local ClaimItem = ReplicatedStorage
+ :WaitForChild("LocalReplicated")
+ :WaitForChild("Items")
+ :WaitForChild("ClaimItem")
+
+local args = { "MegaXPOrb", "Fighting" }
+
+while true do
+ task.wait(0.01)
+ ClaimItem:FireServer(unpack(args))
+end
+   end,
+})
+
+local Button = StatsTab:CreateButton({
+   Name = "Max Mining stats (It'll take abit)",
+   Callback = function()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local ClaimItem = ReplicatedStorage
+ :WaitForChild("LocalReplicated")
+ :WaitForChild("Items")
+ :WaitForChild("ClaimItem")
+
+local args = { "MegaXPOrb", "Mining" }
+
+while true do
+ task.wait(0.01)
+ ClaimItem:FireServer(unpack(args))
+end
+   end,
+})
+
+local Button = StatsTab:CreateButton({
+   Name = "Max Fishing stats (It'll take abit)",
+   Callback = function()
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local ClaimItem = ReplicatedStorage
+ :WaitForChild("LocalReplicated")
+ :WaitForChild("Items")
+ :WaitForChild("ClaimItem")
+
+local args = { "MegaXPOrb", "Fishing" }
+
+while true do
+ task.wait(0.01)
+ ClaimItem:FireServer(unpack(args))
+end
    end,
 })
